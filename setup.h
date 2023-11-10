@@ -5,11 +5,11 @@
 //#define AUDI //Audi SMD board
 //#define VW2 //VW THD board
 //#define TESTMODE //LED scroll
-//#define STROBE //PWM Brightness
-#define START_BLINK //Startup blink at full brightness
+#define STROBE //PWM Brightness
+//#define START_BLINK //Startup blink at full brightness
 
-//#define FUNCTION_VOLTAGE
-#define FUNCTION_TEMPERATURE
+#define FUNCTION_VOLTAGE
+//#define FUNCTION_TEMPERATURE
 //#define FUNCTION_PRESSURE
 
 #ifdef VW
@@ -70,12 +70,14 @@ PIN_PC4};
 
 const uint8_t LEDs_count = DEVICE_LED_COUNT;
 
-#define V_UPPER 15.5f
-#define V_LOWER 10.0f
+#define P_UPPER 9.5f
+#define P_LOWER 0.0f
 #define T_UPPER 145.5f
 #define T_LOWER 40.0f
+#define V_UPPER 15.5f
+#define V_LOWER 9.5f
 #define K_DIVIDER (220.0f/1220.0f)
-#define DUTY_CYCLE 240
+#define DUTY_CYCLE 253
 
 const uint8_t analogPin = A0;
 

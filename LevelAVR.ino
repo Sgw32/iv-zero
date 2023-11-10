@@ -1,6 +1,7 @@
 #include "setup.h"
 #include "function_voltage.h"
 #include "function_temperature.h"
+#include "function_pressure.h"
 
 uint8_t timeCount = 0;
 
@@ -92,6 +93,16 @@ void loop()
   adc_res=adc_res>>4; // div by 16
   leds_lit = countLedsLitVoltage(adc_res);
   #endif
+
+  #ifdef FUNCTION_PRESSURE
+  uint16_t adc_res=0;
+  for (int i=0;i!=16;i++)
+  {
+    adc_res+=analogRead(analogPin);
+  }
+  adc_res=adc_res>>4; // div by 16
+  leds_lit = countLedsLitPressure(adc_res);
+  #endif
   
   
   //Temperature sensor
@@ -121,7 +132,6 @@ void loop()
     LEDs_set&=~(1<<i);
     #endif
   }
-  delay(100);
   
   #else
   

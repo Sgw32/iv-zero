@@ -1,6 +1,7 @@
 #include "setup.h"
 #include "function_voltage.h"
 #include "function_temperature.h"
+#include "function_tds18b20.h"
 #include "function_pressure.h"
 
 uint8_t timeCount = 0;
@@ -47,7 +48,6 @@ void setup() {
   for (int i=0;i!=LEDs_count;i++)
   {
     pinMode(LEDs[i],OUTPUT);
-    
   }
   #endif
   
@@ -106,7 +106,7 @@ void loop()
   
   
   //Temperature sensor
-  #ifdef FUNCTION_TEMPERATURE
+  #if defined (FUNCTION_TEMPERATURE) || defined(FUNCTION_TEMPERATURE_DS18B20)
   processOilTemperature();
   leds_lit = countLedsLitTemperature();
   #endif

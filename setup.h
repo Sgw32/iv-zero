@@ -11,6 +11,7 @@
 #define FUNCTION_VOLTAGE
 //#define FUNCTION_TEMPERATURE
 //#define FUNCTION_PRESSURE
+//#define FUNCTION_TEMPERATURE_DS18B20
 
 #ifdef VW
 const uint8_t LEDs[] = {PIN_PD3,
@@ -74,6 +75,8 @@ const uint8_t LEDs_count = DEVICE_LED_COUNT;
 #define P_LOWER 0.0f
 #define T_UPPER 145.5f
 #define T_LOWER 40.0f
+#define T_UPPER_DS18B20 60
+#define T_LOWER_DS18B20 0
 #define V_UPPER 15.5f
 #define V_LOWER 9.5f
 #define K_DIVIDER (220.0f/1220.0f)

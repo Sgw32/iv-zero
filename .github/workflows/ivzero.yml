@@ -15,8 +15,8 @@ jobs:
         sketch-paths: |
          - ./
         platforms: |
-          - name: "MiniCore"
-          - source-url: https://github.com/MCUdude/MiniCore.git
+          - name: MiniCore:avr
+          - source-url: https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json
         fqbn: "MiniCore:avr:48:bootloader=false,variant=modelP,BOD=2v7,LTO=Os,clock=16MHz_external"
         libraries: |
           - name: OneWire

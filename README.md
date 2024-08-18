@@ -1,5 +1,7 @@
 # IV-Zero Indicators
 
+[![Build IV-Zero](https://github.com/Sgw32/iv-zero/actions/workflows/ivzero.yml/badge.svg)](https://github.com/Sgw32/iv-zero/actions/workflows/ivzero.yml)
+
 ## Description
 
 This project involves the use of IV-Indicators in the Zero version, which come in three types:

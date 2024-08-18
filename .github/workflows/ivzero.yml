@@ -1,4 +1,4 @@
-name: Build Digifiz Replica Arduino
+name: Build IV-Zero
 on: 
  - push
  - pull_request
@@ -16,6 +16,7 @@ jobs:
          - ./
         platforms: |
           - name: "MiniCore:avr"
+          - source-url: https://github.com/MCUdude/MiniCore.git
         fqbn: "MiniCore:avr:48:bootloader=false,variant=modelP,BOD=2v7,LTO=Os,clock=16MHz_external"
         libraries: |
           - name: OneWire

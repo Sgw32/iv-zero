@@ -70,10 +70,16 @@ void setup() {
   sei(); // allow interrupts
   #endif
   #ifdef STROBE
-  LEDs_set = 0xFFF;
-  delay(100);
-  LEDs_set = 0x0;
-  delay(100);
+  for (int i=0;i!=5;i++)
+  {
+    LEDs_set = 0xFFF;
+    delay(100);
+  }
+  for (int i=0;i!=5;i++)
+  {
+    LEDs_set = 0x0;
+    delay(100);
+  }
   #endif
 }
 

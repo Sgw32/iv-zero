@@ -1,15 +1,15 @@
 #ifndef SETUP_H
 #define SETUP_H
 
-#define VW //VW SMD board
+//#define VW //VW SMD board
 //#define AUDI //Audi SMD board
-//#define VW2 //VW THD board
+#define VW2 //VW THD board
 //#define TESTMODE //LED scroll
 #define STROBE //PWM Brightness
 //#define START_BLINK //Startup blink at full brightness
 
-#define FUNCTION_VOLTAGE
-//#define FUNCTION_TEMPERATURE
+//#define FUNCTION_VOLTAGE
+#define FUNCTION_TEMPERATURE
 //#define FUNCTION_PRESSURE
 //#define FUNCTION_TEMPERATURE_DS18B20
 
